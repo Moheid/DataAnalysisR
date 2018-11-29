@@ -57,7 +57,7 @@ conditioned on making available complete source code of licensed works and
 modifications, which include larger works using a licensed work, under the 
 same license. Copyright and license notices must be preserved. 
 Contributors provide an express grant of patent rights. For more details see 
-[LICENSE](LICENSE.html).
+[LICENSE](https://orchid00.github.io/jobWordSearch/LICENSE.html).
 
 ## Citation
 
@@ -67,10 +67,10 @@ Contributors provide an express grant of patent rights. For more details see
 [https://github.com/orchid00/jobWordSearch](https://github.com/orchid00/jobWordSearch). 
 GNU General Public License v3.0.
 
-[contributing]: CONTRIBUTING.html
+[contributing]: https://orchid00.github.io/jobWordSearch/CONTRIBUTING.html
 [reportRmd]: https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd
 [report]: https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html
 [installPkgs]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R 
 [customeFunctions]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/01_custome_functions.R 
 [webScrapping]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/webScrapping.R
-[scripts]: https://orchid00.github.io/jobWordSearch/scripts/
+[scripts]: https://github.com/orchid00/jobWordSearch/tree/master/scripts
