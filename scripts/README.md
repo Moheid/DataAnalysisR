@@ -18,9 +18,52 @@ to collect data from **indeed.com**.
 It will save the job ads as text files in `results > data > pages` and then
 for each job ad, it will perform a search for sentences and save results in text
 form in `results > data > sentences`.
-After collecting the sentences, go to the report and run the search.
+- After collecting the sentences, go to the report and [run the search][reportRmd].
+
+### Notes
+
+You can run the `webScrapping.R` from the console, from the main folder
+
+```
+Rscript --vanilla scripts/webScrapping.R --help
+```
+It will display the needed options
+```
+Usage: scripts/webScrapping.R [options]
 
 
+Options:
+	-u URL, --url=URL
+		URL for search such as [default]
+
+	-t JOBTITLE, --jobtitle=JOBTITLE
+		words for jobtitle, use + instead of space
+
+	-c CONTAINS, --contains=CONTAINS
+		Words contained in the search, use + instead of space
+
+	-h, --help
+		Show this help message and exit
+
+```
+
+You can either provide arguments or it will use defaults:
+
+```
+Searching arguments
+ url: https://www.indeed.com/ 
+ job title: data+steward 
+ contains words: life+sciences 
+```
+
+Once you have data using the script `webScrapping.R` you can tweak the 
+[report][reportRmd] to search for your own words.
+
+The `webScrapping.R` script saves all the jobs in text file with a date, so you 
+can rerun the script many times and look for adds over many days. 
+All the job ads look for sentences, there are other kinds of tokes you can try.
+
+[reportRmd]: https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd
 [report]: https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html
 [installPkgs]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R 
 [customeFunctions]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/01_custome_functions.R 

@@ -28,41 +28,8 @@ to collect data from **indeed.com**.
 It will save the job ads as text files in `results > data > pages` and then
 for each job ad, it will perform a search for sentences and save results in text
 form in `results > data > sentences`.
-After collecting the sentences, go to the report and run the search.
+- After collecting the sentences, go to the report and [run the search][reportRmd].
 
-### Notes
-You can run the `webScrapping.R` from the console, from the main folder
-
-```
-Rscript --vanilla scripts/webScrapping.R --help
-```
-It will display the needed options
-```
-Usage: scripts/webScrapping.R [options]
-
-
-Options:
-	-u URL, --url=URL
-		URL for search such as [default]
-
-	-t JOBTITLE, --jobtitle=JOBTITLE
-		words for jobtitle, use + instead of space
-
-	-c CONTAINS, --contains=CONTAINS
-		Words contained in the search, use + instead of space
-
-	-h, --help
-		Show this help message and exit
-
-```
-You can either provide arguments or it will use defaults:
-
-```
-Searching arguments
- url: https://www.indeed.com/ 
- job title: data+steward 
- contains words: life+sciences 
-```
 
 Everyday is likely to have new job adds, hence the search will store files with
 date. You can save them all and then run the search of key words in the report 
@@ -90,7 +57,7 @@ conditioned on making available complete source code of licensed works and
 modifications, which include larger works using a licensed work, under the 
 same license. Copyright and license notices must be preserved. 
 Contributors provide an express grant of patent rights. For more details see 
-[LICENSE](LICENSE.md).
+[LICENSE](https://github.com/orchid00/jobWordSearch/blob/master/LICENSE.md).
 
 ## Citation
 
@@ -99,7 +66,7 @@ Contributors provide an express grant of patent rights. For more details see
 0000-0002-8990-1985 https://github.com/orchid00/jobWordSearch. 
 GNU General Public License v3.0.
 
-
+[reportRmd]: https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd
 [report]: https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html
 [installPkgs]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R 
 [customeFunctions]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/01_custome_functions.R 
