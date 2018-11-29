@@ -1,4 +1,4 @@
-## Contributing
+# Contributing
 
 :+1::tada: First of all, thanks for taking the time to contribute! :tada::+1:
 
@@ -13,3 +13,7 @@ pull request. If you've never done this before, follow the
 - If you have any suggestions to improve the code, please leave a comment as an 
 issue.
 - If you make a significant contributions you will be listed as an author.
+
+In the interest of fostering an open and welcoming environment, we have a [code of conduct](CODE_OF_CONDUCT.html)
+
+### Happy coding
