@@ -10,10 +10,11 @@ for each job ad a search for sentences is performed and saved in
 for keywords identified around knowledge skills and abilities (KSA's). 
 
 ### Where to start?
-- If you want to see results go to the `report folder`.
+- If you want to see results go to the `report folder`, 
+click [here](report/sentenceSearch.nb.html) to see the notebook.
 - If you want to run the code in your own computer, the steps are:
 
-- Download the project 
+- Download, clone or fork the project 
 - Go to the `scripts` folder
 - `00_installPkgs.R` This script is optional, to be run at the 
 begining of the analysis for setting the environment with all necesary packages
@@ -87,7 +88,7 @@ conditioned on making available complete source code of licensed works and
 modifications, which include larger works using a licensed work, under the 
 same license. Copyright and license notices must be preserved. 
 Contributors provide an express grant of patent rights. For more details see 
-[LICENSE](https://github.com/orchid00/jobWordSearch/blob/master/LICENSE).
+[LICENSE](LICENSE.md).
 
 ## Citation
 
