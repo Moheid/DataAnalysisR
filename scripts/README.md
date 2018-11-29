@@ -8,7 +8,8 @@ click [here][report] to see the notebook.
 - Go to the `scripts` folder
 - `00_installPkgs.R` [This script][installPkgs] is optional, to be run at the 
 begining of the analysis for setting the environment with all necesary packages
-- `01_custome_functions.R` [This script][customeFunctions] contains custome functions to search
+- `01_custome_functions.R` [This script][customeFunctions] contains custome 
+functions to search
 content on the web and do custome filters for **indeed.com**
 This script is called from the main script `webScrapping.R` (that means you 
 don't need to run it separately).
@@ -20,7 +21,7 @@ form in `results > data > sentences`.
 After collecting the sentences, go to the report and run the search.
 
 
-[report]: report/sentenceSearch.nb.html
+[report]: https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html
 [installPkgs]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R 
 [customeFunctions]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/01_custome_functions.R 
 [webScrapping]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/webScrapping.R
