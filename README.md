@@ -87,10 +87,11 @@ conditioned on making available complete source code of licensed works and
 modifications, which include larger works using a licensed work, under the 
 same license. Copyright and license notices must be preserved. 
 Contributors provide an express grant of patent rights. For more details see 
-[LICENSE](LICENSE.md).
+[LICENSE](https://github.com/orchid00/jobWordSearch/blob/master/LICENSE).
 
 ## Citation
 
 "Indeed web Scrapping for KSA", November 2018. 
 [Paula Andrea Martinez](https://orcid.org/0000-0002-8990-1985) with ORCID iD 
-0000-0002-8990-1985 https://github.com/. GNU General Public License v3.0.
+0000-0002-8990-1985 https://github.com/orchid00/jobWordSearch. 
+GNU General Public License v3.0.
