@@ -4,13 +4,23 @@ output: html_notebook
 ---
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. The code is 
-displayed within the notebook, the results appear beneath the code. 
+displayed within the notebook, the results appear beneath the code. I recommend 
+to click on code "Hide all Code", if you prefer to see only results.
 
-The R packages used for the search are:
+The R packages used for the search are tidyverse and here:
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 library(here)
 ```
+
+Using the script webScrapping.R from the scripts folder we have collated some 
+job ads as text files in `results > data > pages` and then
+for each job ad, a search for sentences was performed and 
+the results were saved in text form in `results > data > sentences`.
+
+After collecting the sentences, this report shows the search for KSA's.
+
+This report is meant to be an example, it was last rendered on `r Sys.Date()`.
 
 ```{r include=FALSE}
 # Loads custome function
