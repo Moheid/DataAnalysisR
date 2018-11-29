@@ -10,7 +10,7 @@ for each job ad a search for sentences is performed and saved in
 for keywords identified around knowledge skills and abilities (KSA's). 
 
 The code is written in R, using packages listed in
-[`00_installPkgs.R`][installPkgs], using R version 3.5.1 (2018-07-02), developed 
+`00_installPkgs.R` [here][installPkgs], using R version 3.5.1 (2018-07-02), developed 
 on a x86_64-pc-linux-gnu platform.
 
 ### Where to start?
@@ -67,7 +67,7 @@ Contributors provide an express grant of patent rights. For more details see
 [https://github.com/orchid00/jobWordSearch](https://github.com/orchid00/jobWordSearch). 
 GNU General Public License v3.0.
 
-[contributing]: 
+[contributing]: https://github.com/orchid00/jobWordSearch/blob/master/CONTRIBUTING.md
 [reportRmd]: https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd
 [report]: https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html
 [installPkgs]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R 

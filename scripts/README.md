@@ -8,7 +8,7 @@ click [here][report] to see the notebook.
    - If you want to run the code in your own computer, the steps are:
 
    - Download, clone or fork the project 
-   - Go to the [`scripts` folder][scripts]
+   - Go to the `scripts` folder (you are here!)
    - `00_installPkgs.R` [This script][installPkgs] is optional, to be run at the 
 begining of the analysis for setting the environment with all necesary packages
    - `01_custome_functions.R` [This script][customeFunctions] contains custome 
