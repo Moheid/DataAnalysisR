@@ -4,14 +4,14 @@
 
 ## Overview
 This a fairly simple web scrapping solution. It saves job ads from 
-**indeed.com**. as text files in `results > data > pages` and then
+**indeed.com**. as text files in `results > data > pages` and then,
 for each job ad a search for sentences is performed and saved in
-`results > data > sentences`. After collecting the sentences,the report looks 
+`results > data > sentences`. After collecting the sentences, the report looks 
 for keywords identified around knowledge skills and abilities (KSA's). 
 
-The code is written in R, using packages listed in
-`00_installPkgs.R` [here][installPkgs], using R version 3.5.1 (2018-07-02), developed 
-on a x86_64-pc-linux-gnu platform.
+The code is written in R version 3.5.1 (2018-07-02), 
+using packages listed in 00_installPkgs.R [here][installPkgs], 
+developed on a x86_64-pc-linux-gnu platform.
 
 ### Where to start?
 - See results
@@ -57,7 +57,7 @@ conditioned on making available complete source code of licensed works and
 modifications, which include larger works using a licensed work, under the 
 same license. Copyright and license notices must be preserved. 
 Contributors provide an express grant of patent rights. For more details see 
-[LICENSE](https://github.com/orchid00/jobWordSearch/blob/master/LICENSE.md).
+[LICENSE](LICENSE.html).
 
 ## Citation
 
@@ -67,7 +67,7 @@ Contributors provide an express grant of patent rights. For more details see
 [https://github.com/orchid00/jobWordSearch](https://github.com/orchid00/jobWordSearch). 
 GNU General Public License v3.0.
 
-[contributing]: https://github.com/orchid00/jobWordSearch/blob/master/CONTRIBUTING.md
+[contributing]: CONTRIBUTING.html
 [reportRmd]: https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd
 [report]: https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html
 [installPkgs]: https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R 
