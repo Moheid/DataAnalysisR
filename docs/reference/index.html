@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> • indeedKSA</title>
+<title>indeedKSA</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -92,6 +92,54 @@
   <div class="contents col-md-9">
     <div class="page-header">
       <h1>Reference</h1>
+    </div>
+    
+    <div>
+        <h3 id="where-to-start">Where to start?</h3>
+<ul>
+<li>See results
+<ul>
+<li>If you want to see an example of results go to the <code>report folder</code>, click <a href="https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html">here</a> to see the notebook.</li>
+</ul></li>
+<li>Do it yourself (DIY)</li>
+<li><p>If you want to run the code in your own computer, the steps are:</p></li>
+<li>Download, clone or fork the project</li>
+<li>Go to the <a href="https://github.com/orchid00/jobWordSearch/blob/master/script"><code>scripts</code></a> folder</li>
+<li><code>00_installPkgs.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R">This script</a> is optional, to be run at the begining of the analysis for setting the environment with all necesary packages</li>
+<li><code>01_custome_functions.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/01_custome_functions.R">This script</a> contains custome functions to search content on the web and do custome filters for <strong>indeed.com</strong> This script is called from the main script <code>webScrapping.R</code> (that means you don't need to run it separately).</li>
+<li><code>webScrapping.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/webScrapping.R">This is the main script</a> to collect data from <strong>indeed.com</strong>. It will save the job ads as text files in <code>results &gt; data &gt; pages</code> and then for each job ad, it will perform a search for sentences and save results in text form in <code>results &gt; data &gt; sentences</code>.
+<ul>
+<li>After collecting the sentences, go to the report and <a href="https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd">run the search</a>.</li>
+</ul></li>
+</ul>
+<h3 id="notes">Notes</h3>
+<p>You can run the <code>webScrapping.R</code> from the console, from the main folder</p>
+<pre><code>Rscript --vanilla scripts/webScrapping.R --help</code></pre>
+<p>It will display the needed options</p>
+<pre><code>Usage: scripts/webScrapping.R [options]
+
+
+Options:
+    -u URL, --url=URL
+        URL for search such as [default]
+
+    -t JOBTITLE, --jobtitle=JOBTITLE
+        words for jobtitle, use + instead of space
+
+    -c CONTAINS, --contains=CONTAINS
+        Words contained in the search, use + instead of space
+
+    -h, --help
+        Show this help message and exit
+</code></pre>
+<p>You can either provide arguments or it will use defaults:</p>
+<pre><code>Searching arguments
+ url: https://www.indeed.com/ 
+ job title: data+steward 
+ contains words: life+sciences </code></pre>
+<p>Once you have data using the script <code>webScrapping.R</code> you can tweak the <a href="https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd">report</a> to search for your own words.</p>
+<p>The <code>webScrapping.R</code> script saves all the jobs in text file with a date, so you can rerun the script many times and look for adds over many days. All the job ads look for sentences, there are other kinds of tokes you can try.</p>
+        
     </div>
 
     <table class="ref-index">
