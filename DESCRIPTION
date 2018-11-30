@@ -15,5 +15,7 @@ Description: This a fairly simple web scrapping solution. It saves job ads from
     developed on a x86_64-pc-linux-gnu platform.
 Depends: R (>= 3.5.1)
 License: GNU General Public License v3.0
+URL: https://github.com/orchid00/jobWordSearch, 
+     https://orchid00.github.io/jobWordSearch
 LazyData: true
 RoxygenNote: 6.1.1
