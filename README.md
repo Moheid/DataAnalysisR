@@ -28,25 +28,7 @@ developed on a x86_64-pc-linux-gnu platform.
     [script][installPkgs] at the begining of the analysis 
     (this is needed only at the start of the project). This script will 
     set the environment with all necessary packages, and will create the folder 
-    structure for the project. 
-    The project structure looks like this: 
-
-```
-└── scripts
-|   ├── 00_installPkgs.R
-|   ├── 01_custome_functions.R
-|   ├── README.md
-|   └── webScrapping.R
-├── report
-│   ├── sentenceSearch.nb.html
-│   └── sentenceSearch.Rmd
-├── results
-│   ├── data
-│   │   ├── pages
-│   │   └── sentences
-│   │       └── allsentences
-│   └── RData
-```
+    structure for the project (below). 
     - `01_custome_functions.R` [This script][customeFunctions] contains custome 
     functions to search content on the web and do custome filters 
     for **indeed.com**. This script is called from the main script
@@ -59,7 +41,27 @@ developed on a x86_64-pc-linux-gnu platform.
     of the analysis.
     - After collecting the sentences, go to the report and 
     [run the search][reportRmd].
+    
+#### Folder structure
 
+The project structure looks like this: 
+
+```
+└── scripts
+|   ├── 00_installPkgs.R
+|   ├── 01_custome_functions.R
+|   ├── README.md
+|   └── webScrapping.R
+├── report
+│   ├── sentenceSearch.nb.html
+│   └── sentenceSearch.Rmd
+└── results
+    ├── data
+    │   ├── pages
+    │   └── sentences
+    │       └── allsentences
+    └── RData
+```
 
 Everyday is likely to have new job adds, hence the search will store files with
 the date included in the name. You can save adds on different dates, then run 
