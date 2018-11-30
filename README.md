@@ -1,6 +1,7 @@
 # Indeed web Scrapping for KSAs
 
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/) 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1750341.svg)](https://zenodo.org/record/1750341)
 
 ## Overview
 This a fairly simple web scrapping solution. It saves job ads from 
@@ -91,7 +92,7 @@ For more details see
 [Paula Andrea Martinez](https://orcid.org/0000-0002-8990-1985) with ORCID iD 
 0000-0002-8990-1985.
 [https://github.com/orchid00/jobWordSearch](https://github.com/orchid00/jobWordSearch). 
-GNU General Public License v3.0.
+GNU General Public License v3.0. [https://zenodo.org/record/1750341](https://zenodo.org/record/1750341)
 
 [contributing]: https://orchid00.github.io/jobWordSearch/CONTRIBUTING.html
 [reportRmd]: https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd

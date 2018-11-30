@@ -1,7 +1,7 @@
 {
     "@context": "https://doi.org/",
     "@type": "SoftwareSourceCode",
-    "id": "@id",
+    "id": "https://zenodo.org/record/1750341",
     "schema":"http://schema.org/",
     "codemeta": "https://codemeta.github.io/terms/",
     "Organization": {"@id": "schema:Organization"},
