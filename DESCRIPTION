@@ -1,6 +1,8 @@
 Package: indeedKSA
+Type: SoftwareSourceCode
 Title: Web scrapping solution, to save job ads from indeed.com as text files and find keywords
 Version: 0.1
+Date: 2018-11-29
 Authors@R: person("Paula Andrea", "Martinez", email = "mvpaula0@gmail.com",
                   role = c("aut", "cre"))
 Description: This a fairly simple web scrapping solution. It saves job ads from 
@@ -11,7 +13,7 @@ Description: This a fairly simple web scrapping solution. It saves job ads from
     The code is written in R version 3.5.1 (2018-07-02), 
     using packages listed in 00_installPkgs.R, 
     developed on a x86_64-pc-linux-gnu platform.
-Depends: R (>= 3.1.0)
+Depends: R (>= 3.5.1)
 License: GNU General Public License v3.0
 LazyData: true
 RoxygenNote: 6.1.1

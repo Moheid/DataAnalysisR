@@ -15,12 +15,12 @@ using packages listed in 00_installPkgs.R [here][installPkgs],
 developed on a x86_64-pc-linux-gnu platform.
 
 ### Where to start?
-- Want to see the results?
+- Want to see the results? (this is meant for users)
     - If you want to see an example of results go to the `report folder`, 
     click [here][report] to see the notebook.
 
 
-- Do it yourself (DIY) approach
+- Do it yourself (DIY) approach (this is meant for contributors and developers)
     - If you want to run the code in your own computer, the steps are:
     - You need to download the `scripts` and the `report` folders with their 
    contents (all the results files are generated when running the scripts).
@@ -86,7 +86,7 @@ For more details see
 
 ## Citation
 
-"Indeed web Scrapping for KSA", November 2018. 
+"Indeed web scrapping for KSAs" v0.1, November 2018. 
 [Paula Andrea Martinez](https://orcid.org/0000-0002-8990-1985) with ORCID iD 
 0000-0002-8990-1985.
 [https://github.com/orchid00/jobWordSearch](https://github.com/orchid00/jobWordSearch). 
