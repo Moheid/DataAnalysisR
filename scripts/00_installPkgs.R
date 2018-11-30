@@ -2,7 +2,7 @@
 
 #
 #   Description: Setting up the environment before running analysis
-#                Run this script first
+#                Run this script first, and only at the begining of the project.
 #   Date: 2018, November 23
 #   Paula Andrea Martinez
 #   ORCID iD 0000-0002-8990-1985
@@ -32,5 +32,17 @@ rm(list_of_packages, new_packages)
 
 #Message
 print(paste("All needed packages have been installed on", Sys.Date()))
+
+#Message
+library(here)
+print("Creating folder structure if needed")
+if (!dir.exists("results")) {
+    dir.create("results")
+    dir.create(here("results", "RData"))
+    dir.create(here("results", "data"))
+    dir.create(here("results", "data", "pages"))
+    dir.create(here("results", "data", "sentences"))
+}
+      
 
       

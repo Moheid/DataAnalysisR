@@ -4,38 +4,61 @@
 
 ## Overview
 This a fairly simple web scrapping solution. It saves job ads from 
-**indeed.com**. as text files in `results > data > pages` and then,
+**indeed.com** as text files in `results > data > pages` and then,
 for each job ad a search for sentences is performed and saved in
 `results > data > sentences`. After collecting the sentences, the report looks 
-for keywords identified around knowledge skills and abilities (KSA's). 
+for keywords identified around knowledge skills and abilities (KSA's) and shown
+in a table. 
 
 The code is written in R version 3.5.1 (2018-07-02), 
 using packages listed in 00_installPkgs.R [here][installPkgs], 
 developed on a x86_64-pc-linux-gnu platform.
 
 ### Where to start?
-- See results
+- Want to see the results?
     - If you want to see an example of results go to the `report folder`, 
-click [here][report] to see the notebook.
+    click [here][report] to see the notebook.
 
-- Do it yourself (DIY)
-   - If you want to run the code in your own computer, the steps are:
 
-   - Download, clone or fork the project 
-   - Go to the [`scripts` folder][scripts]
-   - `00_installPkgs.R` [This script][installPkgs] is optional, to be run at the 
-begining of the analysis for setting the environment with all necesary packages
-   - `01_custome_functions.R` [This script][customeFunctions] contains custome 
-functions to search
-content on the web and do custome filters for **indeed.com**
-This script is called from the main script `webScrapping.R` (that means you 
-don't need to run it separately).
-   - `webScrapping.R` [This is the main script][webScrapping] 
-to collect data from **indeed.com**.
-It will save the job ads as text files in `results > data > pages` and then
-for each job ad, it will perform a search for sentences and save results in text
-form in `results > data > sentences`.
-    - After collecting the sentences, go to the report and [run the search][reportRmd].
+- Do it yourself (DIY) approach
+    - If you want to run the code in your own computer, the steps are:
+    - You need to download the `scripts` and the `report` folders with their 
+   contents (all the results files are generated when running the scripts).
+    - Go to the [`scripts` folder][scripts] run the `00_installPkgs.R` 
+    [script][installPkgs] at the begining of the analysis 
+    (this is needed only at the start of the project). This script will 
+    set the environment with all necessary packages, and will create the folder 
+    structure for the project. 
+    The project structure looks like this: 
+
+```
+└── scripts
+|   ├── 00_installPkgs.R
+|   ├── 01_custome_functions.R
+|   ├── README.md
+|   └── webScrapping.R
+├── report
+│   ├── sentenceSearch.nb.html
+│   └── sentenceSearch.Rmd
+├── results
+│   ├── data
+│   │   ├── pages
+│   │   └── sentences
+│   │       └── allsentences
+│   └── RData
+```
+    - `01_custome_functions.R` [This script][customeFunctions] contains custome 
+    functions to search content on the web and do custome filters 
+    for **indeed.com**. This script is called from the main script
+    `webScrapping.R` (that means you don't need to run it separately).
+    - `webScrapping.R` [This is the main script][webScrapping] to collect 
+    data from **indeed.com**. It will save the job ads as text files in 
+    `results > data > pages` and then for each job ad, it will perform a search 
+    for sentences and save results in text form in `results > data > sentences`.
+    All the adds and sentences are saved as text with date for reproducibility 
+    of the analysis.
+    - After collecting the sentences, go to the report and 
+    [run the search][reportRmd].
 
 
 Everyday is likely to have new job adds, hence the search will store files with
@@ -56,7 +79,7 @@ This **GNU General Public License v3.0** is a strong copyleft license
 conditioned on making available complete source code of licensed works and 
 modifications, which include larger works using a licensed work, under the 
 same license. Copyright and license notices must be preserved. 
-Contributors provide an express grant of patent rights. For more details see 
+For more details see 
 [LICENSE](https://orchid00.github.io/jobWordSearch/LICENSE.html).
 
 ## Citation

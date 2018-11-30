@@ -2,7 +2,7 @@
 
 #
 #   Description: This script contains custome functions to search
-#                content on the web and do custome filters for indeed.com
+#                content on the web and do custome filters for indeed.com.
 #                This script is called from the main script webScrapping.R
 #   Date: 2018, November 28
 #   Paula Andrea Martinez

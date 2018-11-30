@@ -53,8 +53,7 @@ allsentences %>%
     mutate_at(vars(sentence), ~str_squish(.)) %>%  # reduced repeated white spaces in a string 
     arrange(sentence) 
 
-cat("Number of sentences analised", nrow(mysentences))
-#View(mysentences)
+cat("Number of unique sentences analised", nrow(mysentences))
 ```
 
 ```{r include=FALSE}
@@ -97,3 +96,4 @@ mysentences %>%
 ```
 
 This report is meant to be an example, it was last rendered on `r Sys.Date()`.
+
