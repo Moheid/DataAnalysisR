@@ -42,6 +42,7 @@ if (!dir.exists("results")) {
     dir.create(here("results", "data"))
     dir.create(here("results", "data", "pages"))
     dir.create(here("results", "data", "sentences"))
+    dir.create(here("results", "data", "rawhtml"))
 }
       
 

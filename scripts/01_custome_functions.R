@@ -20,8 +20,11 @@ getPageContent <- function(url, css_class, num){
     #url <- "https://www.indeed.com/rc/clk?jk=788e7e311656fc54&fccid=09fad757f3449fa5&vjs=3"
     #css_class <- ".jobsearch-JobComponent-description"
     
+    htmlpage <-
+        read_html(url)
+    
     page_content <-
-        read_html(url) %>% 
+        htmlpage %>% 
         html_nodes(css = css_class) %>% 
         html_text() %>%         # clean text
         str_replace_all(regex("\n"), "\\. ") %>%
@@ -35,6 +38,11 @@ getPageContent <- function(url, css_class, num){
     page_content <-
         page_content %>% 
         tibble(doc = as.numeric(num), text = .) # convert character to a tibble
+    
+    write_html(htmlpage, 
+              path = here("results", "data","rawhtml", 
+                          paste0(Sys.Date(), "_", num, ".html"))
+    )
     
     save(page_content, 
         file = here("results", "RData", 

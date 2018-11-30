@@ -58,6 +58,7 @@ The project structure looks like this:
 └── results
     ├── data
     │   ├── pages
+    │   ├── rawhtml
     │   └── sentences
     │       └── allsentences
     └── RData
