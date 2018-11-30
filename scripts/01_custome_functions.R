@@ -41,7 +41,7 @@ getPageContent <- function(url, css_class, num){
         tibble(doc = as.numeric(num), text = .) # convert character to a tibble
     
     write_html(htmlpage, 
-              path = here("results", "data","rawhtml", 
+              file = here("results", "data","rawhtml", 
                           paste0(Sys.Date(), "_", num, ".html"))
     )
     
