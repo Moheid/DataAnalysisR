@@ -1,7 +1,7 @@
 Package: indeedKSA
 Type: SoftwareSourceCode
 Title: Web scrapping solution, to save job ads from indeed.com as text files and find keywords
-Version: 0.1
+Version: 0.2
 Date: 2018-11-29
 Authors@R: person("Paula Andrea", "Martinez", email = "mvpaula0@gmail.com",
                   role = c("aut", "cre"))

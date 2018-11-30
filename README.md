@@ -87,7 +87,7 @@ For more details see
 
 ## Citation
 
-"Indeed web scrapping for KSAs" v0.1, November 2018. 
+"Indeed web scrapping for KSAs" v0.2, November 2018. 
 [Paula Andrea Martinez](https://orcid.org/0000-0002-8990-1985) with ORCID iD 
 0000-0002-8990-1985.
 [https://github.com/orchid00/jobWordSearch](https://github.com/orchid00/jobWordSearch). 
