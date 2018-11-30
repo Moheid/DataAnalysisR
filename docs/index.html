@@ -71,34 +71,50 @@
 <div id="overview" class="section level2">
 <h2 class="hasAnchor">
 <a href="#overview" class="anchor"></a>Overview</h2>
-<p>This a fairly simple web scrapping solution. It saves job ads from <strong>indeed.com</strong>. as text files in <code>results &gt; data &gt; pages</code> and then, for each job ad a search for sentences is performed and saved in <code>results &gt; data &gt; sentences</code>. After collecting the sentences, the report looks for keywords identified around knowledge skills and abilities (KSA’s).</p>
+<p>This a fairly simple web scrapping solution. It saves job ads from <strong>indeed.com</strong> as text files in <code>results &gt; data &gt; pages</code> and then, for each job ad a search for sentences is performed and saved in <code>results &gt; data &gt; sentences</code>. After collecting the sentences, the report looks for keywords identified around knowledge skills and abilities (KSA’s) and shown in a table.</p>
 <p>The code is written in R version 3.5.1 (2018-07-02), using packages listed in 00_installPkgs.R <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R">here</a>, developed on a x86_64-pc-linux-gnu platform.</p>
 <div id="where-to-start" class="section level3">
 <h3 class="hasAnchor">
 <a href="#where-to-start" class="anchor"></a>Where to start?</h3>
 <ul>
-<li>See results
+<li>Want to see the results?
 <ul>
 <li>If you want to see an example of results go to the <code>report folder</code>, click <a href="https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html">here</a> to see the notebook.</li>
 </ul>
 </li>
-<li>Do it yourself (DIY)
+<li>Do it yourself (DIY) approach
 <ul>
-<li><p>If you want to run the code in your own computer, the steps are:</p></li>
-<li>Download, clone or fork the project</li>
-<li>Go to the <a href="https://github.com/orchid00/jobWordSearch/tree/master/scripts"><code>scripts</code> folder</a>
-</li>
+<li>If you want to run the code in your own computer, the steps are:</li>
+<li>You need to download the <code>scripts</code> and the <code>report</code> folders with their contents (all the results files are generated when running the scripts).</li>
+<li>Go to the <a href="https://github.com/orchid00/jobWordSearch/tree/master/scripts"><code>scripts</code> folder</a> run the <code>00_installPkgs.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R">script</a> at the begining of the analysis (this is needed only at the start of the project). This script will set the environment with all necessary packages, and will create the folder structure for the project (below).</li>
 <li>
-<code>00_installPkgs.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/00_installPkgs.R">This script</a> is optional, to be run at the begining of the analysis for setting the environment with all necesary packages</li>
+<code>01_custome_functions.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/01_custome_functions.R">This script</a> contains custome functions to search content on the web and do custome filters for <strong>indeed.com</strong>. This script is called from the main script <code>webScrapping.R</code> (that means you don’t need to run it separately).</li>
 <li>
-<code>01_custome_functions.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/01_custome_functions.R">This script</a> contains custome functions to search content on the web and do custome filters for <strong>indeed.com</strong> This script is called from the main script <code>webScrapping.R</code> (that means you don’t need to run it separately).</li>
-<li>
-<code>webScrapping.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/webScrapping.R">This is the main script</a> to collect data from <strong>indeed.com</strong>. It will save the job ads as text files in <code>results &gt; data &gt; pages</code> and then for each job ad, it will perform a search for sentences and save results in text form in <code>results &gt; data &gt; sentences</code>.</li>
-<li><p>After collecting the sentences, go to the report and <a href="https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd">run the search</a>.</p></li>
+<code>webScrapping.R</code> <a href="https://github.com/orchid00/jobWordSearch/blob/master/scripts/webScrapping.R">This is the main script</a> to collect data from <strong>indeed.com</strong>. It will save the job ads as text files in <code>results &gt; data &gt; pages</code> and then for each job ad, it will perform a search for sentences and save results in text form in <code>results &gt; data &gt; sentences</code>. All the adds and sentences are saved as text with date for reproducibility of the analysis.</li>
+<li>After collecting the sentences, go to the report and <a href="https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd">run the search</a>.</li>
 </ul>
 </li>
 </ul>
+<div id="folder-structure" class="section level4">
+<h4 class="hasAnchor">
+<a href="#folder-structure" class="anchor"></a>Folder structure</h4>
+<p>The project structure looks like this:</p>
+<pre><code>└── scripts
+|   ├── 00_installPkgs.R
+|   ├── 01_custome_functions.R
+|   ├── README.md
+|   └── webScrapping.R
+├── report
+│   ├── sentenceSearch.nb.html
+│   └── sentenceSearch.Rmd
+└── results
+    ├── data
+    │   ├── pages
+    │   └── sentences
+    │       └── allsentences
+    └── RData</code></pre>
 <p>Everyday is likely to have new job adds, hence the search will store files with the date included in the name. You can save adds on different dates, then run the search of key words in the report when you have the adds that you need (or have selected some of the ads).</p>
+</div>
 </div>
 </div>
 <div id="contributing" class="section level2">
@@ -109,7 +125,7 @@
 <div id="license" class="section level2">
 <h2 class="hasAnchor">
 <a href="#license" class="anchor"></a>License</h2>
-<p>This <strong>GNU General Public License v3.0</strong> is a strong copyleft license conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. For more details see <a href="https://orchid00.github.io/jobWordSearch/LICENSE.html">LICENSE</a>.</p>
+<p>This <strong>GNU General Public License v3.0</strong> is a strong copyleft license conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. For more details see <a href="https://orchid00.github.io/jobWordSearch/LICENSE.html">LICENSE</a>.</p>
 </div>
 <div id="citation" class="section level2">
 <h2 class="hasAnchor">
