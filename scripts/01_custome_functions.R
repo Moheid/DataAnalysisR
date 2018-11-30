@@ -20,6 +20,7 @@ getPageContent <- function(url, css_class, num){
     #url <- "https://www.indeed.com/rc/clk?jk=788e7e311656fc54&fccid=09fad757f3449fa5&vjs=3"
     #css_class <- ".jobsearch-JobComponent-description"
     
+    # added requirement to save html source -- this could be a new function
     htmlpage <-
         read_html(url)
     
