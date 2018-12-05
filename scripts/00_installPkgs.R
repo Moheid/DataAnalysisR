@@ -14,11 +14,12 @@
 # begining of the analysis for setting the environment with all necesary 
 # packages
 
-list_of_packages <- c("knitr", "tidyverse", "DBI", "ggmap", "likert",
+list_of_packages <- c("lattice", "nlme", "Matrix", "knitr", "tidyverse",
+                      "likert", "DBI", "ggmap", "gridExtra",
                       "mapproj", "RColorBrewer", "forcats", "extrafont",
                       "scales", "wordcloud", "tm", "SnowballC", "grid",
-                      "ggthemes", "here", "rvest", "tidytext", "gridExtra",
-                      "optparse", "xml2")
+                      "ggthemes", "here", "xml2", "rvest", "tidytext", 
+                      "optparse")
 
 #check which packages need to be installed
 new_packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]
