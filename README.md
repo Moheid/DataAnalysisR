@@ -9,7 +9,7 @@ This a fairly simple web scrapping solution. It saves job ads from
 for each job ad a search for sentences is performed and saved in
 `results > data > sentences`. After collecting the sentences, the report looks 
 for keywords identified around knowledge skills and abilities (KSA's) and shown
-in a table. 
+in a table [here][report]. 
 
 The code is written in R version 3.5.1 (2018-07-02), 
 using packages listed in 00_installPkgs.R [here][installPkgs], 
