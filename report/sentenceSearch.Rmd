@@ -3,24 +3,36 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+The Implementation studies (IS) for Learning paths (LP) and Towards Data 
+Stewardship (DM) are proposing a a web scrapping solution to search for job ads 
+and look for descriptions of knowledge skills and abilities (KSA's). 
+The current solution searches and saves job ads from indeed.com as text 
+(csv, html) and then, it collects sentences for each job ad, after collecting 
+the sentences, the report presented here looks for keywords identified around 
+KSA's.
+
+
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. The code is 
 displayed within the notebook, the results appear beneath the code. I recommend 
 to click on code "Hide all Code", if you prefer to see only results.
 
-The R packages used for the search are tidyverse and here:
+The R packages used for the search are `tidyverse` and `here`:
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 library(here)
 ```
 
-Using the script webScrapping.R from the scripts folder we have collated some 
+Using the script `webScrapping.R` from the scripts folder we have collated some 
 job ads as text files in `results > data > pages` and then
 for each job ad, a search for sentences was performed and 
-the results were saved in text form in `results > data > sentences`.
-
-After collecting the sentences, this report shows the search for KSA's.
+the results were saved in text form in `results > data > sentences`. Once having
+a dataser of sentences, this report shows the search for KSA's.
 
 This report is meant to be an example, it was last rendered on `r Sys.Date()`.
+
+From the keywords below the search is non case sensitive, any keywords with `^`
+means `starts with`, otherwise the keyword will be searched in any part of the 
+sentence. 
 
 ```{r include=FALSE}
 # Loads custome function
