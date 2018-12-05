@@ -1,0 +1,31 @@
+title: indeedKSA
+url: https://github.com/orchid00/jobWordSearch
+template:
+  params:
+    bootswatch: flatly
+navbar:
+  type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+  right:
+    - text: "Documentation"
+      icon: fas fa-book
+      menu:
+      -  text: Authors
+         href: authors.html
+      -  text: CoC
+         href: CODE_OF_CONDUCT.html
+      -  text: Contributing
+         href: CONTRIBUTING.html
+      -  text: Experience
+         href: experiences_shared.html
+      -  text: License
+         href: LICENSE.html
+      -  text: Reference
+         href: reference/index.html
+      -  text: Report
+         href: report/sentenceSearch.nb.html
+    - text: "github"
+      icon: fa-github fa-lg
+      href: https://github.com/orchid00/jobWordSearch
