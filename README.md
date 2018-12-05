@@ -65,11 +65,13 @@ The project structure looks like this:
     └── RData
 ```
 
-Everyday is likely to have new job adds, hence the search will store files with
+Every day is likely to have new job ads, hence the search will store files with
 the date included in the name. You can save adds on different dates, then run 
 the search of key words in the report when you have the adds that you need 
 (or have selected some of the ads).
 
+If you are interested in knowing more about the process you can read about the 
+[experience][experience_shared].
 
 ## Contributing
 
@@ -94,6 +96,7 @@ For more details see
 [https://github.com/orchid00/jobWordSearch](https://github.com/orchid00/jobWordSearch). 
 GNU General Public License v3.0. [https://zenodo.org/record/1750341](https://zenodo.org/record/1750341)
 
+[experience_shared]: https://orchid00.github.io/jobWordSearch/experiences_shared.html
 [contributing]: https://orchid00.github.io/jobWordSearch/CONTRIBUTING.html
 [reportRmd]: https://github.com/orchid00/jobWordSearch/blob/master/report/sentenceSearch.Rmd
 [report]: https://orchid00.github.io/jobWordSearch/report/sentenceSearch.nb.html
