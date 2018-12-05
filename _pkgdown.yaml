@@ -2,7 +2,7 @@ title: indeedKSA
 url: https://github.com/orchid00/jobWordSearch
 template:
   params:
-    bootswatch: flatly
+    bootswatch: cerulean
 navbar:
   type: inverse
   left:
