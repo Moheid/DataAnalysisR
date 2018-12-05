@@ -108,4 +108,3 @@ mysentences %>%
 ```
 
 This report is meant to be an example, it was last rendered on `r Sys.Date()`.
-

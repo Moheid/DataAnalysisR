@@ -8,6 +8,8 @@ navbar:
   left:
     - icon: fa-home
       href: index.html
+    - text: Reference
+      href: reference.html 
   right:
     - text: "Documentation"
       icon: fas fa-book
@@ -23,7 +25,7 @@ navbar:
       -  text: License
          href: LICENSE.html
       -  text: Reference
-         href: reference/index.html
+         href: reference.html
       -  text: Report
          href: report/sentenceSearch.nb.html
     - text: "github"

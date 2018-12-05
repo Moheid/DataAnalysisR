@@ -74,7 +74,7 @@
     "maintainer": "https://orcid.org/0000-0002-8990-1985",
     "softwareSuggestions": { "@id": "codemeta:softwareSuggestions", "@type": "@id"},
     "contIntegration": { "@id": "codemeta:contIntegration", "@type": "@id"},
-    "buildInstructions": "https://orchid00.github.io/jobWordSearch/reference/index.html",
+    "buildInstructions": "https://orchid00.github.io/jobWordSearch/reference.html",
     "embargoDate": { "@id":"codemeta:embargoDate", "@type": "schema:Date" },
     "funding": { "@id": "codemeta:funding" },
     "readme": "https://github.com/orchid00/jobWordSearch/blob/master/README.md",
