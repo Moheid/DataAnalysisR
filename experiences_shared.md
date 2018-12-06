@@ -35,16 +35,16 @@ found for several job titles.
 Once we found some jobs to parse, the other question was, what to look for. For 
 text mining, there are a few options, sentences, words or group of words. The first
 test was with sentences, but that came up to be the first problem. Many ads use
-bullet points, which don't end up with a period `.`. In any case, I continue to look 
-for words in an attempt to see which ones the most common words and what does that 
+bullet points, which don't end up with a period. In any case, I continued to look 
+for words in an attempt to see which ones were the most common words and what does that 
 tell me. Most common words for ads related to "Data Steward" are data, business, 
 management and experience, [with 96% and above occurrence in the job ads searched](https://github.com/orchid00/jobsScrapping/blob/master/figures/top20words.pdf).
-That was a bit interesting but didn't say much to continue. I've also looked for 
+That was a bit interesting, but didn't say much to continue. I've also looked for 
 word groups, 2 or 3 up to 6, trying to make sense of the search.
 Apart from not giving me any interesting results, I came across with the problem 
 of duplicated ads, which I just decided to avoid.
 
-Finally after some weeks of leaving it aside. The idea of cleaning the HTML before 
+Finally, after some weeks of leaving it aside. The idea of cleaning the HTML before 
 parsing it was what lead to the current implementation. From the HTML code the process is: 
 1. to replace the end of lines with a period (which is super useful with lists, and 
 helps down to the road to have sentences). 
