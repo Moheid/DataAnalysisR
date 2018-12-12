@@ -1,7 +1,7 @@
 {
-    "@context": "https://doi.org/",
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
     "@type": "SoftwareSourceCode",
-    "id": "https://zenodo.org/record/1750341",
+    "id": "https://zenodo.org/record/1998210",
     "schema":"http://schema.org/",
     "codemeta": "https://codemeta.github.io/terms/",
     "Organization": {"@id": "schema:Organization"},
@@ -49,11 +49,16 @@
     "processorRequirements": { "@id": "schema:processorRequirements"},
     "producer": { "@id": "schema:producer"},
     "programmingLanguage": "R",
-    "provider": { "@id": "schema:provider"},
+    "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+    },
     "publisher": { "@id": "schema:publisher"},
     "relatedLink": { "@id": "schema:relatedLink", "@type": "@id"},
     "releaseNotes": { "@id": "schema:releaseNotes", "@type": "@id"},
-    "runtimePlatform": { "@id": "schema:runtimePlatform"},
+    "runtimePlatform": "R version 3.5.1 (2018-07-02)",
     "sameAs": { "@id": "schema:sameAs", "@type": "@id"},
     "softwareHelp": { "@id": "schema:softwareHelp"},
     "softwareRequirements": { "@id": "schema:softwareRequirements", "@type": "@id"},
@@ -63,7 +68,7 @@
     "supportingData": { "@id": "schema:supportingData"},
     "targetProduct": { "@id": "schema:targetProduct"},
     "url": { "@id": "schema:url", "@type": "@id"},
-    "version": "0.2",
+    "version": "0.3",
     "author": {
         "@id": "https://orcid.org/0000-0002-8990-1985",
         "@type": "Person",
