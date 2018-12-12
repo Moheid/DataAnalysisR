@@ -19,11 +19,12 @@ list_of_packages <- c("lattice", "nlme", "Matrix", "knitr", "tidyverse",
                       "mapproj", "RColorBrewer", "forcats", "extrafont",
                       "scales", "wordcloud", "tm", "SnowballC", "grid",
                       "ggthemes", "here", "xml2", "rvest", "tidytext", 
-                      "optparse")
+                      "optparse", "textreadr")
 
 #check which packages need to be installed
 new_packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]
 
+print(paste("Installing: ", new_packages))
 # install packages
 if (length(new_packages)) install.packages(new_packages, 
                                           repos = "https://cran.rstudio.com/")
