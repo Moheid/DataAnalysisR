@@ -1,0 +1,110 @@
+---
+title: "SKA search"
+output:
+  pdf_document:
+    df_print: kable
+---
+
+The Implementation studies (IS) for Learning paths (LP) and Towards Data 
+Stewardship (DM) are proposing a a web scrapping solution to search for job ads 
+and look for descriptions of knowledge skills and abilities (KSA's). 
+The current report uses external data that has been saved in doc, docx and pdf 
+files. The raw text of these files has then been extracted and saved.
+This reports shows a collection of sentences identified around 
+KSA's.
+
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. The code has been 
+hidden to show only results.
+
+The R packages used for the search are `tidyverse` and `here`:
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(here)
+```
+
+This report was last rendered on `r Sys.Date()`.
+
+
+```{r include=FALSE}
+# Loads custome function
+ReadMyDataFiles <- function(pattern = pattern, path = "./") {
+    map(list.files(path = path, pattern = pattern, full.names = TRUE), 
+        read_csv)
+}
+```
+
+```{r include=FALSE}
+safely_ReadMyDataFiles <- safely(ReadMyDataFiles)
+
+check1 <- safely_ReadMyDataFiles(pattern = "2018", 
+                                 path = here("external_data", "results", "data", "sentences"))
+```
+
+```{r include=FALSE}
+allsentences <- 
+    check1$result %>%
+    map_df(~(.))
+
+dim(allsentences)
+```
+
+```{r include=FALSE}
+# From the keywords below the search is non case sensitive, any keywords with `^`
+# means `starts with`, otherwise the keyword will be searched in any part of the 
+#sentence. 
+
+mysentences <-
+allsentences %>% 
+    distinct(sentence, .keep_all = FALSE) %>% 
+    filter(stringi::stri_count(sentence, regex = "\\w+") > 2) %>% # remove sentences if less than 2 words
+    mutate_at(vars(sentence), ~str_replace_all(., "\\. \\.", "\\.")) %>% 
+    mutate_at(vars(sentence), ~str_replace_all(., "\\. ", " ")) %>% # remove dots in between
+    mutate_at(vars(sentence), ~str_replace_all(., "•", "")) %>%  
+    mutate_at(vars(sentence), ~str_squish(.)) %>%  # reduced repeated white spaces in a string 
+    arrange(sentence) 
+```
+
+```{r echo=FALSE}
+cat("Number of unique sentences analised", nrow(mysentences))
+```
+
+```{r include=FALSE}
+# clean up
+rm(check1)
+
+# save clean sentences
+write_csv(mysentences,  here("external_data", "results", "data", "sentences", "allsentences",
+                                paste0(Sys.Date(), "_allsentences.csv")))
+```
+
+# Analysis of text - KSA
+
+## Knowledge
+
+```{r echo=FALSE}
+mysentences %>% 
+    filter(!grepl(sentence, pattern = "degrees", ignore.case = TRUE)) %>%
+    filter(grepl(sentence, pattern = "^knowledge", ignore.case = TRUE) |
+           grepl(sentence, pattern = "experience|degree|expertise", ignore.case = TRUE)) %>%
+    arrange(sentence)
+```
+## Skills
+
+```{r echo=FALSE}
+mysentences %>% 
+    filter(grepl(sentence, pattern = "skills|proficiency|familiarity", ignore.case = TRUE) |
+           grepl(sentence, pattern = "^highly", ignore.case = TRUE)) %>% 
+    arrange(sentence)
+```
+
+## Abilities
+
+```{r echo=FALSE, as.is=TRUE}
+mysentences %>% 
+    filter(grepl(sentence, pattern = "^ability", ignore.case = TRUE) |
+           grepl(sentence, pattern = "^able to", ignore.case = TRUE) ) %>% 
+    arrange(sentence)
+```
+
+This report was last rendered on `r Sys.Date()`.
